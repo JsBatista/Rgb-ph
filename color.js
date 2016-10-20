@@ -18,27 +18,33 @@ function Color() {
 
   function changeLabel() {
     for (let i = 0; i < 3; i++) {
-      document.getElementsByClassName("numbColor")[i].value = getRGB()[i];
+      [ document.getElementsByClassName("numbColor")[i].value, getRGB()[i] ] = [ getRGB()[i], document.getElementsByClassName("numbColor")[i].value ];
     }
   };
 
-  function callIt(time) {
-    let go = setInterval(() => {
+  function changeByNumber(){    
+      for(let i = 0; i < 3; i++){
+          document.getElementsByClassName("changeColor")[i].value = document.getElementsByClassName("numbColor")[i].value;
+      }
       changeColor();
-      changeLabel();
-    }, time);
-
-    if (!time) {
-      clearInterval(go);
-    };
-  };
+  }
 
   return {
-    callIt: callIt,
+    changeColor : changeColor,
+    changeLabel : changeLabel,    
+    changeByNumber : changeByNumber,
     getRGB: getRGB,
   }
 
 }
 
-let x = Color("changeColor");
-x.callIt(50);
+let x = Color();
+
+function load(){
+    for( let i = 0; i<3; i++ ){
+        document.getElementsByClassName("changeColor")[i].addEventListener("mouseup", function() { x.changeColor(); x.changeLabel()  });
+        document.getElementsByClassName("numbColor")[i].addEventListener("keyup", function() { x.changeByNumber() });
+    }
+}
+
+window.onload = load();

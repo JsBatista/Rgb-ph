@@ -32,6 +32,7 @@ div.Color {
   line-height: 200px;
   font-size: 36pt;
   border-radius: 10px;
+  transition: 0.5s;
 }
 
 nav {
