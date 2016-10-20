@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(176,196,222);
+  height: 100px;
+}
+
+header > h1 {
+  color: white;
+  font-size: 36pt;
+  margin: 0;
+  line-height: 100px;
+}
+
+section {
+  margin-top: 50px;
+}
+
+div.Color {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(128, 128, 128);
+  display: inline-block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-size: 36pt;
+  border-radius: 10px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+input.numbColor {
+  width: 40px;
+  text-align: center;
+  margin-right: 20px;
+}
