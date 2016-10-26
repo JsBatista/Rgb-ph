@@ -7,8 +7,9 @@ body {
 }
 
 header {
-  background-color: rgb(176,196,222);
+  background-color: rgb(128, 128, 128);
   height: 100px;
+  transition: 0.5s;
 }
 
 header > h1 {

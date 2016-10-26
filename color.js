@@ -14,6 +14,7 @@ function Color() {
     for (let i = 0; i < 3; i++) {
       document.getElementsByClassName("Color")[i].style.backgroundColor = "rgb(" + getRGB()[0] + "," +  getRGB()[1] + "," + getRGB()[2] +")";
     }
+    document.getElementsByTagName("header")[0].style.backgroundColor = "rgb(" + getRGB()[0] + "," +  getRGB()[1] + "," + getRGB()[2] +")";
   };
 
   function changeLabel() {
