@@ -45,3 +45,12 @@ input.numbColor {
   text-align: center;
   margin-right: 20px;
 }
+
+button#surprise {
+    padding: 5px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border-width: 5px;
+}

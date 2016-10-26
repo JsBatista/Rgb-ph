@@ -30,10 +30,18 @@ function Color() {
       changeColor();
   }
 
+  function randomColor(){
+      for(let i = 0; i < 3; i++){
+          document.getElementsByClassName("numbColor")[i].value = Math.floor(Math.random() * (256));
+      }
+      changeByNumber();
+  }
+    
   return {
     changeColor : changeColor,
     changeLabel : changeLabel,    
     changeByNumber : changeByNumber,
+    randomColor: randomColor,
     getRGB: getRGB,
   }
 
@@ -46,6 +54,7 @@ function load(){
         document.getElementsByClassName("changeColor")[i].addEventListener("mouseup", function() { x.changeColor(); x.changeLabel()  });
         document.getElementsByClassName("numbColor")[i].addEventListener("keyup", function() { x.changeByNumber() });
     }
+    document.getElementById("surprise").addEventListener("click", function(){ x.randomColor() });
 }
 
 window.onload = load();
